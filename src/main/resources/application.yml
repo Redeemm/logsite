@@ -1,0 +1,27 @@
+jwt:
+  SECRET_KEY: "2a14wqIkQLpoVJWSa3c0WS0QsOVs5zWobT03ocOusnHzJsvPux6Nza7ga"
+  STAFF_SECRET_KEY: "dsfbgf"
+  ExpirationDateInMins: 900000
+  RefreshExpirationInMins: 3600000
+
+  server:
+  error:
+    include-message: always
+    include-binding-errors: always
+
+spring:
+  datasource:
+    password: red
+    url: jdbc:postgresql://localhost:5432/red
+    username: postgres
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+    show-sql: true
+    open-in-view: true
+server:
+  port: 6767
